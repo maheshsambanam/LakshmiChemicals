@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence                  
+                                http://java.sun.com/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="chemicalJPA">
+
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+		<!--Entites are marked here -->
+
+		<class>com.lakshmi.chemicals.entites.OrderedProduct</class>
+		<class>com.lakshmi.chemicals.entites.ProductType</class>
+		<class>com.lakshmi.chemicals.entites.DailyProductionMaintenance
+		</class>
+		<class>com.lakshmi.chemicals.entites.HDBags</class>
+		<class>com.lakshmi.chemicals.entites.Invoice</class>
+		<class>com.lakshmi.chemicals.entites.Product</class>
+		<class>com.lakshmi.chemicals.entites.ProductionProduct</class>
+		<class>com.lakshmi.chemicals.entites.ProductionProductStockMaintenance
+		</class>
+		<class>com.lakshmi.chemicals.entites.RawMaterialForProduct</class>
+		<class>com.lakshmi.chemicals.entites.RawMaterialStockMaintanence
+		</class>
+		<class>com.lakshmi.chemicals.entites.Tax</class>
+		<class>com.lakshmi.chemicals.entites.User</class>
+		<class>com.lakshmi.chemicals.entites.UserType</class>
+
+
+
+
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.connection.url"
+				value="jdbc:mysql://localhost:3306/chemicals?useUnicode=true&amp;characterEncoding=UTF-8" />
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.connection.username" value="root" />
+			<property name="hibernate.connection.password" value="admin" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+
+
+		</properties>
+
+	</persistence-unit>
+</persistence>
